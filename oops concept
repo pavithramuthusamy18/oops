@@ -1,0 +1,33 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+int main()
+{
+	class time{
+		short int h,m,s;
+		public:
+			int hh,mm,ss;
+			void getdata()
+			{cout<<"Enter time:";
+			cout<<"\n Hours?";
+			cin>>h;
+			cout<<"\nMinutes?";
+			cin>>m;
+			cout<<"\n Seconds?";
+			cin>>s;
+			hh=h;mm=m;ss=s;
+			}
+			
+		};
+		time t;
+	t.getdata();
+int S=0;cout<<"\n The time is:";
+if(t.hh<10) cout<<"0"<<t.hh<<":";
+else cout<<t.hh<<":";
+if(t.mm<10)cout<<"0"<<t.mm<<":";
+else cout<<t.mm<<":";
+if(t.ss<10)cout<<"0"<<t.ss<<"\n";
+else cout<<t.ss<<"\n";
+S=(t.hh*3600)+(t.mm*60)+t.ss;
+cout<<"\n Time in total seconds:"<<S;	return 0;
+}
